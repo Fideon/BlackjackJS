@@ -5,6 +5,22 @@ let values = ['Ace', 'King', 'Queen', 'Jack',
               'Ten', 'Nine', 'Eight', 'Seven',
               'Six', 'Five', 'Four', 'Three', 'Two',];
 
+let textArea = document.getElementById('txtArea');
+let btnNewGame = document.getElementById('btnNewGame');
+let btnHit = document.getElementById('btnHit');
+let btnStay = document.getElementById('btnStay');
+
+btnHit.style.display = 'none';
+btnStay.style.display = 'none';
+
+btnNewGame.addEventListener('click', function() 
+{
+  textArea.innerText = 'Started...';
+  btnNewGame.style.display = 'none';
+  btnHit.style.display = 'inline';
+  btnStay.style.display = 'inline';
+})
+
 function createDeck()
 {
   let deck = [];
