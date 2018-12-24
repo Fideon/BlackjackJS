@@ -1,9 +1,24 @@
 /// BlackJack
-let deck = [
-            "Ace of Spades",
-            "Two of Spades",
-            "Three of Spades"
-            ];
+
+let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
+let values = ['Ace', 'King', 'Queen', 'Jack',
+              'Ten', 'Nine', 'Eight', 'Seven',
+              'Six', 'Five', 'Four', 'Three', 'Two',];
+
+let deck = [];
+
+for(let suit = 0; suit < suits.length; suit++)
+{
+  for(let value = 0; value < values.length; value++)
+  {
+    deck.push(values[value] + " of " + suits[suit]);
+  }
+}
+
+for (let i = 0; i < deck.length; i++)
+{
+  console.log(deck[i]);
+}
 
 //let card1 = "Ace of Spades",
 //    card2 = "Ten of Hearts";
